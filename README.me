@@ -57,3 +57,54 @@ rails generate scaffold Comment user:references article:references body:text
 
 # <p class="notice"><%= notice %></p>
 # <p class="alert"><%= alert %></p>
+
+<%# Vistas de RoR %>
+
+<% Esto imprime cosas que hara una funcion %>
+
+<%= con un igual imprime tambien el OBEJETO Esto imprime cosas %>
+
+
+<%# Redirecciones %>
+<%= link_to "Inicio", root_path %>
+
+Esto es algo asi
+<a href="aqui el path">Inicio</a>
+<%# Redirecciones %>
+
+# cuando tipeo
+resources :articles,  
+
+# Todos esas rutas se genera solo con resources
+get "/articles"   => index
+post "/articles"  => create
+delete "/articles" => delete o detroy 
+get "/articles/:id" => show
+get "/articles/new" => new
+get "/articles/:id/edit" => edit
+patch "/articles/:id" => update
+put "/articles/:id" => update
+
+resources :articles,  exept:[:delete] #EXEPTO ESTAS
+resources :articles,  only:[:create] #SOLO PARA
+
+OJOOOOO hay que crear un controlador que se llame articles_controller
+
+
+REINICIAR APP
+bundle exec passenger-config restart-app
+
+MIGRAR
+RAILS_ENV=production bundle exec rake db:migrate
+RAILS_ENV=production bundle exec rake db:migrate:status
+
+
+Entrar a AWS
+sudo ssh -i /home/alex/Documentos/work/production-terminal-aws.pem.txt ubuntu@18.191.99.229 
+
+
+
+
+
+
+
